@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фильтр</title>
+  <style>
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    #search-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    #country-select {
+      max-height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: white;
+    }
+
+    #country-select ul li:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Фильтр стран</h1>
+    <form id="filter-form">
+      <input type="text" id="search-input" placeholder="Введите название страны" oninput="createCountrySelect()">
+      <div id="country-select"></div>
+    </form>
+  </div>
+  <script defer src="filter.js"></script>
+</body>
+
+</html>
